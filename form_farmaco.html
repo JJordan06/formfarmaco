@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es-PE">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Formulario de Farmacovigilancia</title>
+  <link href="favicon.png" type="image/x-icon" rel="shortcut icon" />
+  <meta name="author" content="DiceaHost">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/livro/style-starter.css">
+  <style>
+    span {
+      color: #ff0000;
+    }
+
+    ;
+  </style>
+</head>
+
+<body>
+  <script src="/livro/jquery-3.3.1.min.js"></script>
+  <script src="/livro/lightbox-plus-jquery.min.js"></script>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand mx-5" href="#">
+        <img src="https://peredadist.com/wp-content/uploads/2022/12/logo_principal.png" alt="Logo" width="150">
+      </a>
+    </div>
+  </nav>
+  <div class="contact-form section-gap pt-5" id="contactenos">
+    <div class="container py-lg-5 py-md-4">
+      <div class="contacts12-main mb-4">
+        <div class="heading text-center mx-auto">
+          <h3 class="head">Formulario de Farmacovigilancia</h3>
+          <p class="my-3 head"> </p>
+        </div>
+        <form action="correo_Farmaco.php" method="post">
+          <h5 class="head">Datos del Paciente</h5>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="nombres">Nombres del paciente:<span>*</span></label>
+              <input type="text" class="form-control" name="nombres" id="nompac" placeholder="" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="apellido1"> Apellidos del paciente:<span>*</span></label>
+              <input type="text" class="form-control" name="apellidos1" id="apepac" placeholder="" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="correo"> Correo del paciente:<span>*</span></label>
+              <input type="text" class="form-control" name="correo" id="correo" placeholder="" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="dni">Tipo de Documento del paciente: <span>*</span></label>
+              <select name="dni" id="dni" class="form-control" required>
+                <option>CE</option>
+                <option>DNI</option>
+                <option>Pasaporte</option>
+                <option>RUC</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="numero">Número de documento del paciente: <span>*</span></label>
+              <input type="text" class="form-control" name="numero" id="ndp" placeholder="" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="tel">Teléfono o Celular del Paciente <span>*</span></label>
+              <input type="tel" class="form-control" name="tel" id="tp" placeholder="" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="genero">Género del Paciente: <span>*</span></label>
+              <select name="genero" id="gen" class="form-control" required>
+                <option>Masculino</option>
+                <option>Femenino</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="Edadpac">Edad del Paciente <span>*</span></label>
+              <input type="text" class="form-control" name="Edadpac" id="epac" placeholder="" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="Peso">Peso (en Kilogramos) del Paciente:<span>*</span></label>
+              <input type="text" class="form-control" name="Peso" id="Pesop" placeholder="" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="descripcionefecto">Descripción del efecto o reacción adversa ocasionada al Paciente:
+              <span>*</span></label>
+            <textarea class="form-control" name="descripcionefecto" id="descefc" rows="3"
+              placeholder="Describa su efecto o reacción" required></textarea>
+          </div>
+          <h5 class="head">Datos del Reportador</h5>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="nombresreportador">Nombres del Reportador:<span>*</span></label>
+              <input type="text" class="form-control" name="nombresreportador" id="nomrep" placeholder="" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="apellidorep">Apellidos del Reportador:<span>*</span></label>
+              <input type="text" class="form-control" name="apellidorep" id="aperep" placeholder="" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="tefreportador">Teléfono o Celular del Reportador: <span>*</span></label>
+              <input type="text" class="form-control" name="tefreportador" id="telrep" placeholder="" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="tiporep">Tipo de Reportador: <span>*</span></label>
+              <select name="tiporep" id="tr" class="form-control" required>
+                <option>Profesional de la Salud</option>
+                <option>Usuario</option>
+                <option>Otros</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="Nombremedicamento">Nombre del medicamento<span>*</span></label>
+              <input type="text" class="form-control" name="Nombremedicamento" id="nmed" placeholder="" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="Dosisdiaria">Dosis Diaria <span>*</span></label>
+              <input type="text" class="form-control" name="Dosisdiaria" id="ddiaria" placeholder="" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="vadmin">Vía de administración: <span>*</span></label>
+              <select name="vadmin" id="tr" class="form-control" required>
+                <option>Tópica</option>
+                <option>Intravaginal</option>
+                <option>Rectal</option>
+                <option>Oral</option>
+                <option>Ótica</option>
+                <option>Nasal</option>
+                <option>Sublingual</option>
+                <option>Transdérminca</option>
+                <option>Oftálmica</option>
+                <option>Intravenosa</option>
+                <option>Intramuscular</option>
+                <option>Subcutánea</option>
+                <option>Otras vías</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="motivo">Motivo de la Prescripción del medicamento: <span>*</span></label>
+            <textarea class="form-control" name="motivo" id="mot" rows="3" placeholder="" required></textarea>
+          </div>
+          <div>
+            <span style="color: #ff0000;"><b class="alert">*</b></span> <em>La información personal brindada en este
+              formulario se encuentra protegida bajo la Ley de Protección de Datos Personales (Ley N° 29733).
+              Es importante que siempre deje un número telefónico o correo electrónico de contacto, para que un miembro
+              del Equipo de Farmacovigilancia de Pereda Distribuidores se comunique con Usted tan pronto como sea
+              posible, a fin de obtener mayor información.</em><br>
+          </div>
+          <button type="submit" name="enviar" class="btn btn-primary">Enviar Formulario</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
